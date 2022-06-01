@@ -1,11 +1,14 @@
 from django.db import models
 
 # Create your models here.
- class Coin(models.Model):
-     type = models.CharFeild(max_length=125)
-     year = models.CharFeild(max_length=20)
-     value = models.CharField(max_length=25)
-     quantity = models.CharField(max_length=25)
+class Coin(models.Model):
+    type = models.CharFeild(max_length=125)
+    year = models.CharFeild(max_length=20)
+    value = models.CharField(max_length=25)
+    quantity = models.CharField(max_length=25)
 
-     def __str__(self):
+    def __str__(self):
          return self.type
+
+    class Meta:
+        ordering = ['type']
