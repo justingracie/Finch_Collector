@@ -8,8 +8,12 @@
 
 <h1>Coin list</h1>
 {% for coin in coins %}
+<a href="{% url 'coin_detail' coin.pk %}">
 
-<img src="{{coin.img}}" alt="{{coin.type}}">
+    <img src="{{coin.img}}" alt="{{coin.type}}">
+
+</a>
+
 <p>{{coin.type}}</p>
 <p>{{coin.year}}</p>
 

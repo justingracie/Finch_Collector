@@ -1,0 +1,12 @@
+{% extends 'base.html' %} 
+{% block content %}
+<img src="{{coin.img}}" alt="{{coin.type}}">
+
+<div>
+    <h4>Type: {{coin.type}}</h4>
+    <h5>Year: {{coin.year}}</h5>
+    <h5>Face Value: {{coin.value}}</h5>
+    <h3> Quantity: {{coin.quantity}}</h3>
+</div>
+
+{% endblock %}

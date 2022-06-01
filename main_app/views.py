@@ -7,6 +7,7 @@ from django.http import HttpResponse
 from django.views.generic.base import TemplateView
 from .models import Coin
 from django.views.generic.edit import CreateView
+from django.views.generic import DetailView
 
 
 class Home(TemplateView):
@@ -29,3 +30,7 @@ class CoinCreate(CreateView):
     fields = ['type', 'year', 'img', 'value', 'quantity']
     template_name = 'coin_create.html'
     success_url = "/coins/"
+
+class CoinDetail(DetailView):
+    model = Coin
+    template_name = "coin_detail.html"
