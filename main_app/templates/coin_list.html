@@ -1,5 +1,11 @@
 {% extends 'base.html'%}
 {% block content%}
+<div>
+    
+    <a href="{% url 'coin_create' %}">Add Coin</a>
+    
+</div>
+
 <h1>Coin list</h1>
 {% for coin in coins %}
 
