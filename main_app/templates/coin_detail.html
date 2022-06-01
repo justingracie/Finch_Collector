@@ -5,6 +5,9 @@
 <div>
     <a href="{% url 'coin_update' coin.pk %}">Update Coin</a>
 </div>
+<div>
+    <a href="{% url 'coin_delete' coin.pk %}">Delete Coin</a>
+</div>
 
 <div>
     <h4>Type: {{coin.type}}</h4>

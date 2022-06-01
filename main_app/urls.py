@@ -8,4 +8,5 @@ urlpatterns =[
     path('coins/new/', views.CoinCreate.as_view(), name="coin_create"),
     path('coins/<int:pk>/', views.CoinDetail.as_view(), name="coin_detail"),
     path('coins/<int:pk>/update', views.CoinUpdate.as_view(), name="coin_update"),
+    path('coins/<int:pk>/delete', views.CoinDelete.as_view(), name="coin_delete"),
 ]
