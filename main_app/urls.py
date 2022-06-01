@@ -5,4 +5,5 @@ urlpatterns =[
     path('', views.Home.as_view(), name="home"),
     path('about/', views.About.as_view(), name="about"),
     path('coins/', views.CoinList.as_view(), name="coins"),
+    path('coins/new/', views.CoinCreate.as_view(), name="coin_create"),
 ]
