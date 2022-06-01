@@ -8,6 +8,7 @@ from django.views.generic.base import TemplateView
 from .models import Coin
 from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import DetailView
+from django.urls import reverse
 
 
 class Home(TemplateView):
@@ -39,4 +40,6 @@ class CoinUpdate(UpdateView):
     model = Coin
     fields = ['type', 'year', 'img', 'value', 'quantity']
     template_name = "coin_update.html"
-    success_url = "/coins/"
+
+    def get_success_url(self):
+        return reverse('coin_detail', kwargs={'pk': self.object.pk})
