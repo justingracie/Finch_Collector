@@ -3,6 +3,10 @@
 <img src="{{coin.img}}" alt="{{coin.type}}">
 
 <div>
+    <a href="{% url 'coin_update' coin.pk %}">Update Coin</a>
+</div>
+
+<div>
     <h4>Type: {{coin.type}}</h4>
     <h5>Year: {{coin.year}}</h5>
     <h5>Face Value: {{coin.value}}</h5>
