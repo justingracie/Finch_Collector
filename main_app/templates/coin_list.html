@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% block content%}
+<h1>Coin list</h1>
+{% for coin in coins %}
+
+<img src="{{coin.image}}" alt="{{coin.type}}">
+<p>{{coin.type}}</p>
+<p>{{coin.year}}</p>
+
+{% empty %}
+<p>No Coins to display, sorry.</p>
+
+{% endfor %}
+{% endblock %}
+  
