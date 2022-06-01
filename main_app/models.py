@@ -2,8 +2,8 @@ from django.db import models
 
 # Create your models here.
 class Coin(models.Model):
-    type = models.CharFeild(max_length=125)
-    year = models.CharFeild(max_length=20)
+    type = models.TextField(max_length=125)
+    year = models.CharField(max_length=20)
     value = models.CharField(max_length=25)
     quantity = models.CharField(max_length=25)
 
