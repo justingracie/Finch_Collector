@@ -15,5 +15,22 @@
     <h5>Face Value: {{coin.value}}</h5>
     <h3> Quantity: {{coin.quantity}}</h3>
 </div>
+<div>
+    <h3>COMMENTS:</h3>
+    
+    {% for coincomment in coin.comments.all %}
+    
+    <div>
+        <span>{{forloop.counter}}</span>
+        <span><b>{{coincomment.title}}</b></span><br>
+        <span>{{coincomment.statement}}</span>
+    </div>
+    {% empty %}
+    
+    <p>No Comments posted!</p>
+
+    {% endfor %}
+
+</div>
 
 {% endblock %}
