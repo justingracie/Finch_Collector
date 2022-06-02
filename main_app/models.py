@@ -14,3 +14,12 @@ class Coin(models.Model):
 
     class Meta:
         ordering = ['type']
+
+class CoinComment(models.Model):
+    name = models.CharField(max_length=150)
+    title = models.TextField(max_length=150)
+    statement = models.TextField(max_length=600)
+    comment = models.ForeignKey(Coin, on_delete=models.CASCADE, related_name="comments")
+     
+    def __str__(self):
+        return self.title
