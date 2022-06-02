@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.views import View
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
-from .models import Coin
+from .models import Coin, CoinComment
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import DetailView
 from django.urls import reverse
@@ -47,4 +47,10 @@ class CoinUpdate(UpdateView):
 class CoinDelete(DeleteView):
     model = Coin
     template_name = 'coin_delete_confirmation.html'
+    success_url = '/coins/'
+
+class CommentCreate(CreateView):
+    model = CoinComment
+    fields = ['name', 'title', 'statement', 'comment']
+    template_name = 'comment_create.html'
     success_url = '/coins/'

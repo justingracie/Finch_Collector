@@ -16,6 +16,9 @@
     <h3> Quantity: {{coin.quantity}}</h3>
 </div>
 <div>
+    <a href="{% url 'comment_create' %}">Create Comment</a>
+</div>
+<div>
     <h3>COMMENTS:</h3>
     
     {% for coincomment in coin.comments.all %}
